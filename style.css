@@ -1,0 +1,93 @@
+body {
+    background: #0B162C;
+    color: #E0E0E0;
+    font-family: 'Outfit', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.glass-card {
+    background: rgba(26, 47, 80, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+}
+
+.nav-active {
+    color: #FFD700;
+    border-bottom: 3px solid #FFD700;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shaking {
+    animation: shake 0.2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B162C;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A3E72;
+    border-radius: 10px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+    outline: none;
+}
